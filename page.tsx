@@ -1,13 +1,17 @@
-import Navigation from "../Components/Navigation";
-import styles from "../page.module.css";
+import Image from "next/image";
+import styles from "./page.module.css";
+import Welcome from './Components/Welcome';
+import Navigation from './Components/Navigation';
+import Count from "./Components/Count";
 
-export default function AboutPage() {
-    //This is a page that tells a little bit about myself.
-    return (
-        <div className={styles.page}>
-            <Navigation />
-            <h1>This is the About Page</h1>
-            <p>My name is Fahad Arif and I am currently a student at Humber College. This is the first assignment for the Advanced Front-End Programming Course(CPAN - 144).</p>
-        </div>
-    )
+export default function Home() {
+  //This is the main homepage of the website.
+  return (
+    <div className={styles.page}>
+      <h1>Welcome to the Home Page</h1>
+      <Navigation />
+      <Welcome userName="Fahad" />
+      <Count />
+    </div>
+  );
 }
